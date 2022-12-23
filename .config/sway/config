@@ -16,7 +16,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -215,7 +215,7 @@ bar {
 input * {
     xkb_layout "fr"
     accel_profile "flat"
-    pointer_accel -0.5 # set mouse sensitivity (between -1 and 1)
+    pointer_accel 0 # set mouse sensitivity (between -1 and 1)
     xkb_numlock enable
 }
 
@@ -228,5 +228,7 @@ gaps inner 5
 smart_gaps on
 
 default_border pixel 0
+
+output * adaptive_sync on
 
 include /etc/sway/config.d/*
